@@ -68,8 +68,8 @@ shows.forEach(s => {
   const left = document.createElement('div'); left.className = 'meta';
   left.innerHTML = `<strong>${df.format(new Date(s.date))}</strong> · ${s.city} · ${s.venue}`;
   const right = document.createElement('div');
-  const a = document.createElement('a'); a.href = s.link; a.className = 'btn btn--ghost'; a.textContent = 'Tickets';
-  right.appendChild(a);
+  // const a = document.createElement('a'); a.href = s.link; a.className = 'btn btn--ghost'; a.textContent = 'Tickets';
+  // right.appendChild(a);
   li.append(left, right);
   showsList.appendChild(li);
 });

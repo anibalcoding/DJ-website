@@ -84,19 +84,14 @@
   <header class="site-header" id="top" role="banner">
     <div class="container header__inner">
       <a href="#top" class="brand" aria-label="DJ Shutitdown home">
-        <span class="brand__logo" aria-hidden="true">SD</span>
-        <span class="brand__name">DJ Shutitdown</span>
+        <img src="assets/ShutItDown_White-01.png" alt="DJ Shutitdown" height="100px" width="100px">
       </a>
       <nav class="nav" aria-label="Main">
         <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu"><span class="sr-only">Menu</span></button>
         <ul class="nav__menu" id="navMenu">
-          <li><a href="#music">Music</a></li>
           <li><a href="#live">Live</a></li>
-          <li><a href="#reels">Reels</a></li>
+          <li><a href="#socials">Socials</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#shows">Shows</a></li>
-          <li><a href="#press">Press</a></li>
-          <li><a href="#blog">Blog</a></li>
           <li><a href="#contact" class="btn btn--primary">Book Now</a></li>
         </ul>
       </nav>
@@ -112,7 +107,7 @@
           <p>High‑energy hip‑hop sets. Viral remixes. TikTok Live sessions weekly.</p>
           <div class="hero__ctas">
             <a href="#contact" class="btn btn--primary">Request a Booking</a>
-            <a href="#music" class="btn btn--ghost">Listen</a>
+            
           </div>
           <div class="live-badge" id="liveBadge" aria-live="polite" hidden>
             <span class="dot"></span> Live Now on TikTok
@@ -139,8 +134,9 @@
         <div class="live-grid">
           <article class="live-card">
             <h3>Profile Feed</h3>
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@djshutitdown" data-unique-id="djshutitdown" data-embed-from="oembed" data-embed-type="creator">
-              <section> <a target="_blank" href="https://www.tiktok.com/@djshutitdown">@djshutitdown</a> </section>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@dj.shutitdown" data-unique-id="dj.shutitdown" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@dj.shutitdown?refer=creator_embed">@dj.shutitdown</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+            <!-- <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@dj.shutitdown" data-unique-id="djshutitdown" data-embed-from="oembed" data-embed-type="creator"> -->
+              <section> <a target="_blank" href="https://www.tiktok.com/@dj.shutitdown">@djshutitdown</a> </section>
             </blockquote>
           </article>
 
@@ -148,8 +144,9 @@
             <h3>Live Preview</h3>
             <div class="embed embed--video" id="livePreview">
               <!-- Placeholder preview image/video -->
-              <img src="assets/live-placeholder.jpg" alt="TikTok live placeholder preview" loading="lazy">
-              <div class="overlay"><span class="dot"></span> LIVE</div>
+               <blockquote  class="tiktok-embed" cite="https://www.tiktok.com/@dj.shutitdown/video/7571510899907824910" data-video-id="7571510899907824910" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@dj.shutitdown" href="https://www.tiktok.com/@dj.shutitdown?refer=embed">@dj.shutitdown</a> Show some love ❤️ Hit that follow and share for me!! @DFWEC <a target="_blank" title="♬ original sound - DJ SHUTITDOWN" href="https://www.tiktok.com/music/original-sound-7571510955625024270?refer=embed">♬ original sound - DJ SHUTITDOWN</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+              <!-- <img src="assets/live-placeholder.jpg" alt="TikTok live placeholder preview" loading="lazy">
+              <div class="overlay"><span class="dot"></span> LIVE</div> -->
             </div>
             <p class="muted">Autoplay muted. Click to unmute when live.</p>
           </article>
@@ -178,15 +175,15 @@
         </header>
         <div class="reels-grid">
           <!-- Replace with real post URLs -->
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cx8V6xBq1aY/" data-instgrm-version="14"></blockquote>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cu5kWvVsp12/" data-instgrm-version="14"></blockquote>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cp8IjG9w123/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQ7dNsdASnh/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPw9TKijfpN/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQn1ywojVfE/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
     </section>
 
     <!-- Gallery -->
-    <section id="gallery" class="section section--dark">
+    <!-- <section id="gallery" class="section section--dark">
       <div class="container">
         <header class="section__header">
           <h2>Gallery</h2>
@@ -194,7 +191,7 @@
         </header>
         <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Shows -->
     <section id="shows" class="section">
@@ -204,30 +201,13 @@
           <p>See you in the city.</p>
         </header>
         <ul class="shows-list" id="showsList" aria-live="polite"></ul>
-        <div class="subscribe">
-          <a class="btn btn--ghost" href="#" aria-disabled="true">Subscribe (iCal coming soon)</a>
-        </div>
+
       </div>
     </section>
 
-    <!-- Press -->
-    <section id="press" class="section section--dark">
-      <div class="container">
-        <header class="section__header">
-          <h2>Press</h2>
-          <p>What people say.</p>
-        </header>
-        <ul class="press-list">
-          <li>“A crowd‑control monster—seamless blends and fearless drops.” — <em>Nightlight Weekly</em></li>
-          <li>“Hip‑hop attitude with festival‑grade polish.” — <em>Metro Mix</em></li>
-          <li>“Turns any room into a main stage.” — <em>Clubline Report</em></li>
-        </ul>
-        <a class="btn btn--ghost" href="assets/DJ-Shutitdown-EPK.pdf" download>Download EPK</a>
-      </div>
-    </section>
 
     <!-- Blog -->
-    <section id="blog" class="section">
+    <!-- <section id="blog" class="section">
       <div class="container">
         <header class="section__header">
           <h2>Blog</h2>
@@ -235,7 +215,7 @@
         </header>
         <div class="blog-grid" id="blogGrid" aria-live="polite"></div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact / Booking -->
     <section id="contact" class="section section--accent">
@@ -296,16 +276,16 @@
           </div>
         </form>
 
-        <div class="newsletter">
+        <!-- <div class="newsletter">
           <h3>Join the Crew</h3>
           <p>New mixes, show drops, and merch. No spam.</p>
-          <!-- Mailchimp embed placeholder -->
+          
           <form id="mcForm" class="form form--inline" action="https://YOUR_DC.list-manage.com/subscribe/post?u=YOUR_U&amp;id=YOUR_ID" method="post" target="_blank" novalidate>
             <label class="sr-only" for="mce-EMAIL">Email address</label>
             <input type="email" name="EMAIL" class="input" id="mce-EMAIL" placeholder="Email address" required>
             <button type="submit" class="btn btn--ghost">Subscribe</button>
           </form>
-        </div>
+        </div> -->
       </div>
     </section>
   </main>
