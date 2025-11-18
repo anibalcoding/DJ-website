@@ -126,16 +126,16 @@
 
     <section class="ticker" aria-label="Highlights">
       <div class="ticker__track">
-        <p>Worldwide bookings now open</p>
-        <p>New TikTok mixes every Friday</p>
-        <p>Residencies: Dallas · Austin · Houston</p>
-        <p>Shoutouts live on stream — book yours</p>
-        <p>Custom edits, VIP sets, festival drops</p>
-        <p>Worldwide bookings now open</p>
-        <p>New TikTok mixes every Friday</p>
-        <p>Residencies: Dallas · Austin · Houston</p>
-        <p>Shoutouts live on stream — book yours</p>
-        <p>Custom edits, VIP sets, festival drops</p>
+        <p>Weddings</p>
+        <p>Quienceneras</p>
+        <p>Corporate Events</p>
+        <p>Nightclubs</p>
+        <p>Private Events</p>
+        <p>Weddings</p>
+        <p>Quienceneras</p>
+        <p>Corporate Events</p>
+        <p>Nightclubs</p>
+        <p>Private Events</p>
       </div>
     </section>
 
@@ -257,10 +257,17 @@
           </div>
           <div class="form__row">
             <div class="form__field">
+              <label for="phone">Phone number*</label>
+              <input id="phone" name="phone" type="tel" required placeholder="214-000-0000" />
+              <span class="error" data-for="phone"></span>
+            </div>
+            <div class="form__field">
               <label for="date">Event Date*</label>
               <input id="date" name="date" type="date" required />
               <span class="error" data-for="date"></span>
             </div>
+          </div>
+          <div class="form__row">
             <div class="form__field">
               <label for="type">Event Type*</label>
               <select id="type" name="type" required>
@@ -273,15 +280,10 @@
               </select>
               <span class="error" data-for="type"></span>
             </div>
-          </div>
-          <div class="form__row">
             <div class="form__field">
               <label for="venue">Venue</label>
               <input id="venue" name="venue" type="text" placeholder="Venue / City" />
-            </div>
-            <div class="form__field">
-              <label for="budget">Budget (USD)</label>
-              <input id="budget" name="budget" type="number" min="0" step="100" placeholder="e.g., 2500" />
+              <span class="error" data-for="venue"></span>
             </div>
           </div>
           <div class="form__field">
