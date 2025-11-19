@@ -25,7 +25,7 @@ const livePreview = $('#livePreview');
   const hour = now.getHours();
   const live = isFriday && hour >= 21 && hour <= 23;
   if (live) {
-    liveBadge.hidden = false;
+    if (liveBadge) liveBadge.hidden = false;
     livePreview?.classList.add('is-live');
   }
 })();
@@ -81,12 +81,14 @@ const posts = [
   { title: 'TikTok Live Rig: My Setup', date: '2025-09-14', excerpt: 'Signal flow, lighting, and latency tweaks for clean streams.' },
   { title: 'Crate Building 101', date: '2025-08-30', excerpt: 'Organizing crates for open-format nights vs. hip-hop purist sets.' }
 ];
-posts.forEach(p => {
-  const card = document.createElement('article');
-  card.className = 'post';
-  card.innerHTML = `<h3>${p.title}</h3><p class="muted">${new Date(p.date).toLocaleDateString()}</p><p>${p.excerpt}</p>`;
-  blogGrid.appendChild(card);
-});
+if (blogGrid) {
+  posts.forEach(p => {
+    const card = document.createElement('article');
+    card.className = 'post';
+    card.innerHTML = `<h3>${p.title}</h3><p class=\"muted\">${new Date(p.date).toLocaleDateString()}</p><p>${p.excerpt}</p>`;
+    blogGrid.appendChild(card);
+  });
+}
 
 // Booking form validation + submission (email link fallback)
 const bookingForm = $('#bookingForm');
