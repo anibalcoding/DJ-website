@@ -364,14 +364,45 @@ a:hover {
   background: #000;
 }
 
+.reels-block {
+  border-radius: 32px;
+  background: rgba(15, 17, 24, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  overflow: hidden;
+}
+
 .reels-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.reel-card {
+  padding: 14px;
+  border-radius: 24px;
+  background: rgba(20, 22, 34, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .reels-grid blockquote {
   margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 17, 24, 0.85);
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  display: block !important;
+  transform: scale(0.9);
+  transform-origin: top center;
+  margin-inline: auto;
 }
 
 /* About */
@@ -577,6 +608,9 @@ select:focus,
 textarea:focus {
   outline: 2px solid var(--accent);
 }
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
 
 .error {
   color: #ff6b6b;
@@ -648,10 +682,6 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  .reels-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .about__inner {
     grid-template-columns: 1fr;
     position: static;
@@ -685,10 +715,6 @@ textarea:focus {
 
 @media (max-width: 560px) {
   .form__row {
-    grid-template-columns: 1fr;
-  }
-
-  .reels-grid {
     grid-template-columns: 1fr;
   }
 
