@@ -15,6 +15,17 @@ if (toggle) {
   });
 }
 
+$$('[data-scroll-top]').forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (menu && menu.classList.contains('show')) {
+      menu.classList.remove('show');
+      toggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
 // Fake "Live now" detection (replace later with real API/poll)
 const liveBadge = $('#liveBadge');
 const livePreview = $('#livePreview');
