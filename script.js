@@ -15,6 +15,17 @@ if (toggle) {
   });
 }
 
+const menuItems = $$('.menu_items');
+menuItems.forEach(item => {
+  item.addEventListener('click',() => {
+    if (menu && menu.classList.contains('show')) {  
+      menu.classList.remove('show');
+      toggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+})
+
+
 $$('[data-scroll-top]').forEach(link => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
@@ -40,10 +51,6 @@ const livePreview = $('#livePreview');
     livePreview?.classList.add('is-live');
   }
 })();
-
-
-
-
 
 
 // Booking form validation + submission (email link fallback)
