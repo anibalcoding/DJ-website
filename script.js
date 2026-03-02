@@ -64,11 +64,17 @@ if (bookingStatus === 'sent' && formStatus) {
 
 function validate(form){
   let ok = true;
-  $$('input[required], select[required]', form).forEach(el => {
+  $$('input[required], select[required], textarea[required]', form).forEach(el => {
     const errorEl = document.querySelector(`.error[data-for="${el.id}"]`);
-    if (!el.value) { ok = false; errorEl.textContent = 'Required'; }
-    else if (el.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value)) { ok=false; errorEl.textContent = 'Enter a valid email'; }
-    else { errorEl.textContent = ''; }
+    if (!el.value) {
+      ok = false;
+      if (errorEl) errorEl.textContent = 'Required';
+    } else if (el.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value)) {
+      ok = false;
+      if (errorEl) errorEl.textContent = 'Enter a valid email';
+    } else if (errorEl) {
+      errorEl.textContent = '';
+    }
   });
   return ok;
 }

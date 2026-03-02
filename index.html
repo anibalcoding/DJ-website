@@ -6,6 +6,9 @@
   <title>DJ Shutitdown — Official Site</title>
   <meta name="description" content="Book DJ Shutitdown for clubs, festivals, and private events. Hip‑hop focused, high‑energy sets, live on TikTok.">
   <meta name="theme-color" content="#0f1015">
+  <link rel="icon" type="image/png" href="assets/ShutItDown_White-01.png">
+  <link rel="shortcut icon" type="image/png" href="assets/ShutItDown_White-01.png">
+  <link rel="apple-touch-icon" href="assets/ShutItDown_White-01.png">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="DJ Shutitdown — Official Site">
@@ -310,14 +313,15 @@
               <span class="error" data-for="type"></span>
             </div>
             <div class="form__field">
-              <label for="venue">Venue</label>
-              <input id="venue" name="venue" type="text" placeholder="Venue / City" />
+              <label for="venue">Venue*</label>
+              <input id="venue" name="venue" type="text" required placeholder="Venue / City" />
               <span class="error" data-for="venue"></span>
             </div>
           </div>
           <div class="form__field">
-            <label for="notes">Notes</label>
-            <textarea id="notes" name="notes" rows="5" placeholder="Tell us about the event, set length, special requests, etc."></textarea>
+            <label for="notes">Notes*</label>
+            <textarea id="notes" name="notes" rows="5" required placeholder="Tell us about the event, set length, special requests, etc."></textarea>
+            <span class="error" data-for="notes"></span>
           </div>
           <div class="form__actions">
             <button class="btn btn--primary" type="submit">Send Request</button>

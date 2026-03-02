@@ -29,7 +29,7 @@ $fromEmail = ($host !== "" && strpos($host, ".") !== false)
   ? "no-reply@$host"
   : "no-reply@localhost";
 
-$to = "anibalcoding@gmail.com"; 
+$to = "bookshutitdown@gmail.com"; 
 $subject = "New booking request from $name";
 $body = "Name: $name\n";
 $body .= "Email: $email\n";
