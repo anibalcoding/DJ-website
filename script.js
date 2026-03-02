@@ -53,9 +53,14 @@ const livePreview = $('#livePreview');
 })();
 
 
-// Booking form validation + submission (email link fallback)
+// Booking form validation + server submission
 const bookingForm = $('#bookingForm');
 const formStatus = $('#formStatus');
+const bookingStatus = new URLSearchParams(window.location.search).get('booking');
+
+if (bookingStatus === 'sent' && formStatus) {
+  formStatus.textContent = 'Booking request sent. We will follow up soon.';
+}
 
 function validate(form){
   let ok = true;
@@ -69,16 +74,12 @@ function validate(form){
 }
 
 bookingForm?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (!validate(bookingForm)) { formStatus.textContent = 'Please fix the errors above.'; return; }
-  const data = Object.fromEntries(new FormData(bookingForm).entries());
-  // Fallback: mailto (replace with backend/Formspark/Jotform/NetlifyForms later)
-  const subject = encodeURIComponent('Booking Request — DJ Shutitdown');
-  const body = encodeURIComponent(
-    `Name: ${data.name}\nEmail: ${data.email}\nDate: ${data.date}\nType: ${data.type}\nVenue: ${data.venue||''}\nBudget: ${data.budget||''}\nNotes: ${data.notes||''}`
-  );
-  window.location.href = `mailto:bookings@djshutitdown.com?subject=${subject}&body=${body}`;
-  formStatus.textContent = 'Opening your email client…';
+  if (!validate(bookingForm)) {
+    e.preventDefault();
+    formStatus.textContent = 'Please fix the errors above.';
+    return;
+  }
+  formStatus.textContent = 'Sending...';
 });
 
 // Instagram embed refresh on load
